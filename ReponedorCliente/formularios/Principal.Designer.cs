@@ -48,8 +48,8 @@ namespace ReponedorCliente.formularios
             // mantenedorClienteToolStripMenuItem
             // 
             this.mantenedorClienteToolStripMenuItem.Name = "mantenedorClienteToolStripMenuItem";
-            this.mantenedorClienteToolStripMenuItem.Size = new System.Drawing.Size(154, 24);
-            this.mantenedorClienteToolStripMenuItem.Text = "Mantenedor Cliente";
+            this.mantenedorClienteToolStripMenuItem.Size = new System.Drawing.Size(290, 24);
+            this.mantenedorClienteToolStripMenuItem.Text = "Mantenedor Cliente Jose Abanto Gomez";
             this.mantenedorClienteToolStripMenuItem.Click += new System.EventHandler(this.mantenedorClienteToolStripMenuItem_Click);
             // 
             // Principal
