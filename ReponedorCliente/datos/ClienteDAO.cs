@@ -116,10 +116,7 @@ namespace ReponedorCliente.datos
                 {
                     con.desconectar();
                     return false;
-                }
-
-                
-
+                }  
             }
             catch (Exception ex)
             {

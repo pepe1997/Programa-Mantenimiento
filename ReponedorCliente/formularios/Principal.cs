@@ -29,5 +29,11 @@ namespace ReponedorCliente.formularios
             FrmCliente c = new FrmCliente();
             c.Show();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FrmProveedor ventanaProveedor = new FrmProveedor();         //instanciar la ventana proveedor
+            ventanaProveedor.Show();
+        }
     }
 }
