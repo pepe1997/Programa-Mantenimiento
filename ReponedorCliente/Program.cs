@@ -12,6 +12,7 @@ namespace ReponedorCliente
     {
         /// <summary>
         /// Punto de entrada principal para la aplicación.
+        /// comentario prueba mmmmm aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
         /// </summary>
         [STAThread]
         static void Main()
