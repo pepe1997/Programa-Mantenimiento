@@ -27,7 +27,12 @@ namespace ReponedorCliente.formularios
 
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
-
+            txtcod_trabajador.Text = "";
+            txtNombre.Text = "";
+            txtApellido.Text = "";
+            txtTelefono.Text = "";
+            txtcargo.Text = "";
+            txtDireccion.Text = "";
         }
 
         private void dgCliente_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -37,12 +42,46 @@ namespace ReponedorCliente.formularios
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
+            if (consultado == false)
+            {
+                MessageBox.Show("Debe consultar primero al trabajador");
 
+            }
+            else if (txtcod_trabajador.Text.Trim() == "")
+            {
+                MessageBox.Show("Debe ingresar un codigo de trabajador valido");
+
+            }
+            else if (DialogResult.Yes == MessageBox.Show(null, "Desea eliminar el trabajador ", "Confirmar", MessageBoxButtons.YesNo))
+            {
+
+                try
+                {
+
+
+                    if (TrabajadorDao.eliminar(txtcod_trabajador.Text.Trim()))
+                    {
+                        mostarDatos();
+                        limpiarcampos();
+                        MessageBox.Show("trabajador eliminado");
+                        consultado = false;
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se pudo eliminar");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+
+            }
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
 
         private void btnActualizar_Click(object sender, EventArgs e)
@@ -50,12 +89,12 @@ namespace ReponedorCliente.formularios
 
             if (consultado == false)
             {
-                MessageBox.Show("Debe consultar primero al cliente");
+                MessageBox.Show("Debe consultar primero al trabajador");
 
             }
             else if (txtcod_trabajador.Text.Trim() == "")
             {
-                MessageBox.Show("Debe ingresar un id valido");
+                MessageBox.Show("Debe ingresar un codigo de trabajador valido");
 
             }
 
@@ -63,20 +102,20 @@ namespace ReponedorCliente.formularios
             {
                 try
                 {
-                    Cliente cl = new Cliente();
+                    Trabajador cl = new Trabajador();
 
-                    cl.IdCliente = txtIdcliente.Text;
+                    cl.Cod_trabajador = txtcod_trabajador.Text;
                     cl.Nombre = txtNombre.Text;
                     cl.Apellido = txtApellido.Text;
                     cl.Telefono = txtTelefono.Text;
-                    cl.Email = txtEmail.Text;
+                    cl.Cargo = txtcargo.Text;
                     cl.Direccion = txtDireccion.Text;
 
-                    if (ClienteDAO.actualizar(cl))
+                    if (TrabajadorDao.actualizar(cl))
                     {
                         mostarDatos();
                         limpiarcampos();
-                        MessageBox.Show("Empleado actualizado");
+                        MessageBox.Show("trabajador actualizado");
                         consultado = false;
                     }
                     else
@@ -96,25 +135,24 @@ namespace ReponedorCliente.formularios
         {
             if (txtcod_trabajador.Text.Trim() == "")
             {
-                MessageBox.Show("Debe ingresar un id valido");
+                MessageBox.Show("Debe ingresar un codigo de trabajador valido");
 
             }
             else
-            {
-                Cliente c = ClienteDAO.consultar(txtcod_trabajador.Text.Trim());
+            {Trabajador c = TrabajadorDao.consultar(txtcod_trabajador.Text.Trim());
                 if (c == null)
                 {
-                    MessageBox.Show("No existe el empleado con el id" + txtcod_trabajador.Text);
+                    MessageBox.Show("No existe el trabajador con el codigo de trabajor" + txtcod_trabajador.Text);
                     limpiarcampos();
                     consultado = false;
                 }
                 else
                 {
-                    txtcod_trabajador.Text = c.IdCliente;
+                    txtcod_trabajador.Text = c.Cod_trabajador;
                     txtNombre.Text = c.Nombre;
                     txtApellido.Text = c.Apellido;
                     txtTelefono.Text = c.Telefono;
-                    txtcargo.Text = c.Email;
+                    txtcargo.Text = c.Cargo;
                     txtDireccion.Text = c.Direccion;
                     consultado = true;
                 }
@@ -125,7 +163,7 @@ namespace ReponedorCliente.formularios
         {
             if (txtcod_trabajador.Text.Trim() == "")
             {
-                MessageBox.Show("Debe ingresar un id valido");
+                MessageBox.Show("Debe ingresar un codigo de trabajador valido");
 
             }
             else if (txtcod_trabajador.Text.Trim().Length < 8)
@@ -149,7 +187,7 @@ namespace ReponedorCliente.formularios
                     {
                         mostarDatos();
                         limpiarcampos();
-                        MessageBox.Show("Empleado Guardoda");
+                        MessageBox.Show("trabajador Guardado");
 
                     }
                     else
