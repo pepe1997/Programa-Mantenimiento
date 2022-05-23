@@ -184,5 +184,15 @@ namespace ReponedorCliente.formularios
         {
             this.Close();
         }
+
+        private void bt_atras_CamColor(object sender, EventArgs e)
+        {
+            bt_atras.BackColor = Color.FromArgb(255, 128, 128);
+        }
+
+        private void bt_atras_CamColor1(object sender, EventArgs e)
+        {
+            bt_atras.BackColor = Color.Red;
+        }
     }
 }
