@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.button1 = new System.Windows.Forms.Button();
             this.listadatos = new System.Windows.Forms.DataGridView();
-            this.listarbtn = new System.Windows.Forms.Button();
             this.regresarbtn = new System.Windows.Forms.Button();
             this.registrarbtn = new System.Windows.Forms.Button();
             this.txtdireccion = new System.Windows.Forms.TextBox();
@@ -45,7 +45,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.erpError = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.listadatos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.erpError)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -56,6 +58,7 @@
             this.button1.TabIndex = 33;
             this.button1.Text = "LIMPIAR ENTRADAS";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // listadatos
             // 
@@ -67,15 +70,6 @@
             this.listadatos.Size = new System.Drawing.Size(670, 377);
             this.listadatos.TabIndex = 32;
             // 
-            // listarbtn
-            // 
-            this.listarbtn.Location = new System.Drawing.Point(358, 442);
-            this.listarbtn.Name = "listarbtn";
-            this.listarbtn.Size = new System.Drawing.Size(140, 34);
-            this.listarbtn.TabIndex = 31;
-            this.listarbtn.Text = "LISTAR";
-            this.listarbtn.UseVisualStyleBackColor = true;
-            // 
             // regresarbtn
             // 
             this.regresarbtn.Location = new System.Drawing.Point(888, 528);
@@ -84,6 +78,7 @@
             this.regresarbtn.TabIndex = 30;
             this.regresarbtn.Text = "REGRESAR";
             this.regresarbtn.UseVisualStyleBackColor = true;
+            this.regresarbtn.Click += new System.EventHandler(this.regresarbtn_Click_1);
             // 
             // registrarbtn
             // 
@@ -93,6 +88,7 @@
             this.registrarbtn.TabIndex = 29;
             this.registrarbtn.Text = "AGREGAR";
             this.registrarbtn.UseVisualStyleBackColor = true;
+            this.registrarbtn.Click += new System.EventHandler(this.registrarbtn_Click_1);
             // 
             // txtdireccion
             // 
@@ -190,6 +186,10 @@
             this.label1.TabIndex = 17;
             this.label1.Text = "IDCLIENTE";
             // 
+            // erpError
+            // 
+            this.erpError.ContainerControl = this;
+            // 
             // REGISTRAR
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -197,7 +197,6 @@
             this.ClientSize = new System.Drawing.Size(1059, 605);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.listadatos);
-            this.Controls.Add(this.listarbtn);
             this.Controls.Add(this.regresarbtn);
             this.Controls.Add(this.registrarbtn);
             this.Controls.Add(this.txtdireccion);
@@ -214,7 +213,9 @@
             this.Controls.Add(this.label1);
             this.Name = "REGISTRAR";
             this.Text = "REGISTRAR";
+            this.Load += new System.EventHandler(this.REGISTRAR_Load);
             ((System.ComponentModel.ISupportInitialize)(this.listadatos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.erpError)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -224,7 +225,6 @@
 
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView listadatos;
-        private System.Windows.Forms.Button listarbtn;
         private System.Windows.Forms.Button regresarbtn;
         private System.Windows.Forms.Button registrarbtn;
         private System.Windows.Forms.TextBox txtdireccion;
@@ -239,5 +239,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ErrorProvider erpError;
     }
 }

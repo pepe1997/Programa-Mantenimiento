@@ -33,6 +33,7 @@ namespace ReponedorCliente.formularios
             this.mantenedorClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.REGISTRAR = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,7 +59,7 @@ namespace ReponedorCliente.formularios
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(121, 42);
+            this.button1.Location = new System.Drawing.Point(12, 27);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(361, 38);
             this.button1.TabIndex = 3;
@@ -69,7 +70,7 @@ namespace ReponedorCliente.formularios
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(120, 164);
+            this.button2.Location = new System.Drawing.Point(12, 86);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(361, 38);
             this.button2.TabIndex = 4;
@@ -77,11 +78,22 @@ namespace ReponedorCliente.formularios
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // REGISTRAR
+            // 
+            this.REGISTRAR.Location = new System.Drawing.Point(17, 147);
+            this.REGISTRAR.Name = "REGISTRAR";
+            this.REGISTRAR.Size = new System.Drawing.Size(355, 41);
+            this.REGISTRAR.TabIndex = 5;
+            this.REGISTRAR.Text = "REGISTRAR Luis Alesandro Villacorta Herrera";
+            this.REGISTRAR.UseVisualStyleBackColor = true;
+            this.REGISTRAR.Click += new System.EventHandler(this.REGISTRAR_Click);
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(600, 366);
+            this.Controls.Add(this.REGISTRAR);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.menuStrip1);
@@ -101,5 +113,6 @@ namespace ReponedorCliente.formularios
         private System.Windows.Forms.ToolStripMenuItem mantenedorClienteToolStripMenuItem;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button REGISTRAR;
     }
 }

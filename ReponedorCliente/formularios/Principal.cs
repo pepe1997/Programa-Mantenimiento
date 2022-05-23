@@ -41,5 +41,11 @@ namespace ReponedorCliente.formularios
             ClienteFrancisco CF = new ClienteFrancisco();         
             CF.Show();
         }
+
+        private void REGISTRAR_Click(object sender, EventArgs e)
+        {
+            Form REGISTRAR = new REGISTRAR();
+            REGISTRAR.Show();
+        }
     }
 }
