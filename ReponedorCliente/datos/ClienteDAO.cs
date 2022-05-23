@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ReponedorCliente.datos
+namespace ReponedorCliente.datos //AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 {
     class ClienteDAO
     {
