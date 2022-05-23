@@ -50,6 +50,7 @@
     <Compile Include="datos\Conexion.cs" />
     <Compile Include="datos\ProveedorTRA_DA.cs" />
     <Compile Include="datos\TrabajadorDao.cs" />
+    <Compile Include="entidad\ClaseCliente.cs" />
     <Compile Include="entidad\Cliente.cs" />
     <Compile Include="entidad\Proveedor.cs" />
     <Compile Include="entidad\Trabajador.cs" />
@@ -77,6 +78,12 @@
     <Compile Include="formularios\Principal.Designer.cs">
       <DependentUpon>Principal.cs</DependentUpon>
     </Compile>
+    <Compile Include="formularios\REGISTRAR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\REGISTRAR.Designer.cs">
+      <DependentUpon>REGISTRAR.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="formularios\ClienteFrancisco.resx">
@@ -90,6 +97,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="formularios\Principal.resx">
       <DependentUpon>Principal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\REGISTRAR.resx">
+      <DependentUpon>REGISTRAR.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
