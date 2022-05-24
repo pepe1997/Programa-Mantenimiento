@@ -13,7 +13,7 @@ namespace ReponedorCliente.datos
 
         public Conexion()
         {
-            con = new SqlConnection("Server=PCLUIS\\SQLEXPRESS;Database=Prueba;integrated security=true");
+            con = new SqlConnection("Server=LAPTOP-CLR629GA\\SQLEXPRESS;Database=Prueba;integrated security=true");
 
         }
 
